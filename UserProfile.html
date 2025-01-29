@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Sansita Swashed', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-indigo-600 text-white p-6 flex justify-between items-center">
+        <h1 class="text-3xl font-bold">User Profile</h1>
+        <a href="HomePage.html" class="bg-green-500 text-white py-2 px-4 rounded">Back</a>
+    </header>
+
+    <main class="p-6">
+        <section class="flex items-center bg-white p-6 rounded-lg shadow">
+            <img src="https://placehold.co/100" alt="Profile picture of the user, a circular avatar." class="rounded-full w-24 h-24">
+            <div class="ml-6">
+                <h2 class="text-2xl font-semibold">John Doe</h2>
+                <p class="text-gray-600">Software Engineer</p>
+                <p class="text-gray-600">Location: San Francisco, CA</p>
+            </div>
+        </section>
+
+        <section class="mt-8 bg-white p-6 rounded-lg shadow">
+            <h3 class="text-xl font-bold">Skills</h3>
+            <div class="mt-4">
+                <div class="flex">
+                    <div class="w-1/2">
+                        <h4 class="font-semibold">Vertical Skills</h4>
+                        <ul class="list-disc list-inside">
+                            <li>Java</li>
+                            <li>Python</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </div>
+                    <div class="w-1/2">
+                        <h4 class="font-semibold">Horizontal Skills</h4>
+                        <ul class="list-disc list-inside">
+                            <li>Web Development</li>
+                            <li>Data Analysis</li>
+                            <li>Project Management</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-8 bg-white p-6 rounded-lg shadow">
+            <h3 class="text-xl font-bold">Certifications</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4">
+                <div class="bg-gray-200 p-4 rounded-lg">
+                    <h4 class="font-semibold">Certified Java Developer</h4>
+                    <p class="text-gray-600">Issuing Authority: Oracle</p>
+                    <p class="text-gray-500">Date: Jan 2022</p>
+                </div>
+                <div class="bg-gray-200 p-4 rounded-lg">
+                    <h4 class="font-semibold">AWS Certified Solutions Architect</h4>
+                    <p class="text-gray-600">Issuing Authority: Amazon</p>
+                    <p class="text-gray-500">Date: Feb 2023</p>
+                </div>
+                <!-- Repeat similar certification cards as needed -->
+            </div>
+        </section>
+
+        <section class="mt-8 bg-white p-6 rounded-lg shadow">
+            <h3 class="text-xl font-bold">Past Projects</h3>
+            <div class="mt-4">
+                <div class="bg-gray-200 p-4 rounded-lg mb-4">
+                    <h4 class="font-semibold">Project Alpha</h4>
+                    <p class="text-gray-600">Role: Lead Developer</p>
+                    <p class="text-gray-500">Description: Developed a web application using Java and Spring Boot.</p>
+                </div>
+                <div class="bg-gray-200 p-4 rounded-lg mb-4">
+                    <h4 class="font-semibold">Project Beta</h4>
+                    <p class="text-gray-600">Role: Data Analyst</p>
+                    <p class="text-gray-500">Description: Analyzed data trends using Python and Pandas.</p>
+                </div>
+                <!-- Repeat similar project cards as needed -->
+            </div>
+        </section>
+
+        <div class="mt-8 flex justify-end">
+            <button class="bg-green-500 text-white py-2 px-4 rounded mr-4">Edit Profile</button>
+            <button class="bg-gray-300 text-gray-700 py-2 px-4 rounded">Save Changes</button>
+            <button class="bg-gray-300 text-gray-700 py-2 px-4 rounded ml-2">Cancel</button>
+        </div>
+    </main>
+</body>
+</html>

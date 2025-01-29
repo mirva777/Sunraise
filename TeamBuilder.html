@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Your Team</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Sansita Swashed', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-indigo-600 text-white p-6">
+        <h1 class="text-3xl font-bold">Build Your Team</h1>
+        <p class="text-lg">Filter and find the perfect team members.</p>
+    </header>
+
+    <main class="p-6">
+        <section class="bg-white p-6 rounded-lg shadow mt-4">
+            <h2 class="text-xl font-bold">Filters</h2>
+            <div class="flex space-x-4 mt-4">
+                <select class="p-2 border rounded">
+                    <option>Skill Set</option>
+                    <option>Java</option>
+                    <option>Python</option>
+                    <option>JavaScript</option>
+                </select>
+                <div class="flex items-center">
+                    <label class="mr-2">Availability:</label>
+                    <label class="inline-flex items-center">
+                        <input type="radio" class="form-radio" name="availability" value="part-time" checked>
+                        <span class="ml-2">Part-Time</span>
+                    </label>
+                    <label class="inline-flex items-center ml-4">
+                        <input type="radio" class="form-radio" name="availability" value="full-time">
+                        <span class="ml-2">Full-Time</span>
+                    </label>
+                </div>
+                <select class="p-2 border rounded">
+                    <option>Industry/Interest</option>
+                    <option>Technology</option>
+                    <option>Finance</option>
+                    <option>Healthcare</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="bg-white p-4 rounded-lg shadow">
+                <img src="https://placehold.co/100" alt="Profile picture of Alice Johnson, a web developer skilled in JavaScript." class="rounded-full w-16 h-16">
+                <h3 class="font-semibold">Alice Johnson</h3>
+                <p class="text-gray-600">Primary Skill: JavaScript</p>
+                <p class="text-gray-500">Availability: Part-Time</p>
+                <button class="mt-2 bg-green-500 text-white py-1 px-3 rounded">View Profile</button>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow">
+                <img src="https://placehold.co/100" alt="Profile picture of Bob Smith, a data analyst skilled in Python." class="rounded-full w-16 h-16">
+                <h3 class="font-semibold">Bob Smith</h3>
+                <p class="text-gray-600">Primary Skill: Python</p>
+                <p class="text-gray-500">Availability: Full-Time</p>
+                <button class="mt-2 bg-green-500 text-white py-1 px-3 rounded">View Profile</button>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow">
+                <img src="https://placehold.co/100" alt="Profile picture of Carol Lee, a project manager skilled in Agile." class="rounded-full w-16 h-16">
+                <h3 class="font-semibold">Carol Lee</h3>
+                <p class="text-gray-600">Primary Skill: Agile</p>
+                <p class="text-gray-500">Availability: Part-Time</p>
+                <button class="mt-2 bg-green-500 text-white py-1 px-3 rounded">View Profile</button>
+            </div>
+            <!-- Repeat similar team member cards as needed -->
+        </section>
+
+        <div class="fixed bottom-0 left-0 right-0 p-6 bg-white shadow">
+            <button class="bg-green-500 text-white py-2 px-4 rounded w-full">Form a Team</button>
+        </div>
+    </main>
+</body>
+</html>

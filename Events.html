@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Sansita Swashed', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-indigo-600 text-white p-6">
+        <h1 class="text-3xl font-bold">Events</h1>
+        <p class="text-lg">Discover and participate in industry-leading events.</p>
+    </header>
+
+    <main class="p-6">
+        <section class="bg-white p-6 rounded-lg shadow">
+            <h2 class="text-xl font-bold">Filters</h2>
+            <div class="flex space-x-4 mt-4">
+                <select class="p-2 border rounded">
+                    <option>Event Type</option>
+                    <option>Virtual</option>
+                    <option>Physical</option>
+                </select>
+                <select class="p-2 border rounded">
+                    <option>Industry/Focus Area</option>
+                    <option>Technology</option>
+                    <option>Finance</option>
+                    <option>Healthcare</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-white p-4 rounded-lg shadow">
+                <h3 class="font-semibold">Tech Conference 2023</h3>
+                <p class="text-gray-600">Date: 14th January 2023</p>
+                <p class="text-gray-600">Time: 10:00 AM - 4:00 PM</p>
+                <p class="text-gray-600">Location: San Francisco, CA</p>
+                <button class="mt-2 bg-green-500 text-white py-2 px-4 rounded">RSVP</button>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow">
+                <h3 class="font-semibold">Data Science Workshop</h3>
+                <p class="text-gray-600">Date: 20th January 2023</p>
+                <p class="text-gray-600">Time: 1:00 PM - 3:00 PM</p>
+                <p class="text-gray-600">Location: Virtual</p>
+                <button class="mt-2 bg-green-500 text-white py-2 px-4 rounded">RSVP</button>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow">
+                <h3 class="font-semibold">Agile Methodologies Seminar</h3>
+                <p class="text-gray-600">Date: 25th January 2023</p>
+                <p class="text-gray-600">Time: 9:00 AM - 12:00 PM</p>
+                <p class="text-gray-600">Location: New York, NY</p>
+                <button class="mt-2 bg-green-500 text-white py-2 px-4 rounded">RSVP</button>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow">
+                <h3 class="font-semibold">Healthcare Innovations Forum</h3>
+                <p class="text-gray-600">Date: 30th January 2023</p>
+                <p class="text-gray-600">Time: 11:00 AM - 5:00 PM</p>
+                <p class="text-gray-600">Location: Chicago, IL</p>
+                <button class="mt-2 bg-green-500 text-white py-2 px-4 rounded">RSVP</button>
+            </div>
+            <!-- Repeat similar event cards as needed -->
+        </section>
+    </main>
+
+    <!-- Modal for Detailed Event View (hidden by default) -->
+    <div id="event-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center">
+        <div class="bg-white p-6 rounded-lg w-4/5 md:w-1/2">
+            <h2 class="text-2xl font-bold">Tech Conference 2023</h2>
+            <p class="mt-2">Join us for a day of insightful talks and networking with industry leaders in technology.</p>
+            <h3 class="mt-4 font-semibold">Details</h3>
+            <p>Date: 14th January 2023</p>
+            <p>Time: 10:00 AM - 4:00 PM</p>
+            <p>Location: San Francisco, CA</p>
+
+            <h3 class="mt-4 font-semibold">Speakers</h3>
+            <p>John Doe, CEO of Tech Innovations</p>
+            <p>Jane Smith, Data Scientist at Data Solutions</p>
+
+            <button class="mt-4 bg-green-500 text-white py-2 px-4 rounded">RSVP</button>
+            <button class="mt-4 bg-gray-300 text-gray-700 py-2 px-4 rounded" onclick="document.getElementById('event-modal').classList.add('hidden')">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // Add functionality to open modal when "RSVP" is clicked
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function() {
+                if (this.textContent === 'RSVP') {
+                    document.getElementById('event-modal').classList.remove('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

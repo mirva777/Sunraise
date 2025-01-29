@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Marketplace</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Sansita Swashed', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-indigo-600 text-white p-6">
+        <h1 class="text-3xl font-bold">Project Marketplace</h1>
+        <p class="text-lg">Explore opportunities and contribute your skills</p>
+    </header>
+
+    <main class="p-6">
+        <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4">
+            <div class="bg-white p-4 rounded-lg shadow">
+                <h3 class="font-semibold">Project Alpha</h3>
+                <p class="text-gray-600">A short description of Project Alpha</p>
+                <div class="mt-2">
+                    <div class="bg-green-500 h-2 rounded" style="width: 60%;"></div>
+                    <p class="text-sm text-gray-500">Funding: 60%</p>
+                </div>
+                <p class="mt-2 text-sm text-gray-500">Tags: Web Development, Java</p>
+                <button class="mt-2 bg-green-500 text-white py-2 px-4 rounded">Learn More</button>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow">
+                <h3 class="font-semibold">Project Beta</h3>
+                <p class="text-gray-600">A short description of Project Beta.</p>
+                <div class="mt-2">
+                    <div class="bg-green-500 h-2 rounded" style="width: 75%;"></div>
+                    <p class="text-sm text-gray-500">Funding: 75%</p>
+                </div>
+                <p class="mt-2 text-sm text-gray-500">Tags: Data Science, Python</p>
+                <button class="mt-2 bg-green-500 text-white py-2 px-4 rounded">Learn More</button>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow">
+                <h3 class="font-semibold">Project Gamma</h3>
+                <p class="text-gray-600">A short description of Project Gamma.</p>
+                <div class="mt-2">
+                    <div class="bg-green-500 h-2 rounded" style="width: 50%;"></div>
+                    <p class="text-sm text-gray-500">Funding: 50%</p>
+                </div>
+                <p class="mt-2 text-sm text-gray-500">Tags: Mobile Development, React</p>
+                <button class="mt-2 bg-green-500 text-white py-2 px-4 rounded">Learn More</button>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow">
+                <h3 class="font-semibold">Project Delta</h3>
+                <p class="text-gray-600">A short description of Project Delta.</p>
+                <div class="mt-2">
+                    <div class="bg-green-500 h-2 rounded" style="width: 80%;"></div>
+                    <p class="text-sm text-gray-500">Funding: 80%</p>
+                </div>
+                <p class="mt-2 text-sm text-gray-500">Tags: AI, Machine Learning</p>
+                <button class="mt-2 bg-green-500 text-white py-2 px-4 rounded">Learn More</button>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow">
+                <h3 class="font-semibold">Project Epsilon</h3>
+                <p class="text-gray-600">A short description of Project Epsilon.</p>
+                <div class="mt-2">
+                    <div class="bg-green-500 h-2 rounded" style="width: 30%;"></div>
+                    <p class="text-sm text-gray-500">Funding: 30%</p>
+                </div>
+                <p class="mt-2 text-sm text-gray-500">Tags: Blockchain, Cryptocurrency</p>
+                <button class="mt-2 bg-green-500 text-white py-2 px-4 rounded">Learn More</button>
+            </div>
+
+            <!-- Repeat similar project cards as needed -->
+        </section>
+    </main>
+
+    <!-- Modal for Detailed Project View (hidden by default) -->
+    <div id="project-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center">
+        <div class="bg-white p-6 rounded-lg w-4/5 md:w-1/2">
+            <h2 class="text-2xl font-bold">Project Alpha</h2>
+            <p class="mt-2">Full description of Project Alpha goes here. This includes details about the project, its goals, and how users can contribute.</p>
+            <h3 class="mt-4 font-semibold">Project Owner</h3>
+            <p>Owner: John Doe</p>
+            <p class="mt-2">Funding Progress:</p>
+            <div class="bg-green-500 h-2 rounded" style="width: 60%;"></div>
+            <p class="text-sm text-gray-500">Funding: 60%</p>
+            <button class="mt-4 bg-green-500 text-white py-2 px-4 rounded">Contribute</button>
+            <button class="mt-4 bg-gray-300 text-gray-700 py-2 px-4 rounded" onclick="document.getElementById('project-modal').classList.add('hidden')">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // Add functionality to open modal when "Learn More" is clicked
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function() {
+                if (this.textContent === 'Learn More') {
+                    document.getElementById('project-modal').classList.remove('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
